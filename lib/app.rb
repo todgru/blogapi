@@ -18,8 +18,8 @@ end
 # @return JSON
 post '/posts' do
   begin
-    DB.execute("insert into posts(title, body) values(?,?)",
-              [params["title"], params["body"]])
+    DB.execute("insert into posts(post_id, title, body) values(?,?,?)",
+              uuid, [params["title"], params["body"]])
     { success: true }.to_json
   rescue SQLite3::Exception => e
     { error: e }.to_json
