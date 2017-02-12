@@ -1,7 +1,8 @@
 # spec/spec_helper.rb
 require 'rack/test'
 require 'rspec'
-require 'pry'
+
+ENV['BLOGAPI_DB'] = "spec/test.db"
 
 require_relative '../init.rb'
 

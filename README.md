@@ -19,6 +19,8 @@ From the project location, run `bundle install`.
 $ bundle exec ruby init.rb
 ```
 
+Webrick web server will be running on http://127.0.0.1:4567
+
 ## Tests
 
 ```
